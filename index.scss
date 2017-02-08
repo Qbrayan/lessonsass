@@ -1,0 +1,82 @@
+$fontProp:    Arial, sans-serif;
+$primaryColor: #000000;
+
+body {
+  font: 100% $fontProp;
+  color: $primaryColor;
+}
+section {
+  ul {
+    margin: 10px;
+    list-style: none;
+  }
+  
+  li { 
+  	display: inline-block; 
+  	padding: 5px;
+  }
+  img{
+  	width:380px;
+  	height:400px;
+  }
+
+}
+@mixin dimensions ($w,$h,$t,$r,$m,$pad) {
+	  width:$w;
+	  height:$h;
+	  top: $t;
+	  right: $r;
+	  margin:$m;
+	  padding: $pad;
+}
+
+
+.box { @include dimensions(90px,25px,0,0,0px,5px); }
+
+
+.container { width: 100%; }
+
+
+* {
+  box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
+}
+
+h1{
+   margin-top:50px;  
+  text-align: center;
+}
+
+
+p{
+  margin:40px 7px 9px 9px;
+}
+div {
+  border: 1px solid black;
+  margin:10px 10px 10px 10px; 
+  background-color: grey;
+  position:relative;
+  width:3/10 * 100%;
+  float:left;
+ 
+}
+
+#t1 {
+  background-color: #A52A2A;
+  @extend .box;
+  position: absolute;
+  text-align: center; 
+}
+#t2 {
+  background-color: #DEB887;
+  @extend .box;
+  position: absolute;
+  text-align: center;
+}
+#t3 {
+  background-color: #CFA222;
+  @extend .box;
+  position: absolute;
+  text-align: center;
+}
